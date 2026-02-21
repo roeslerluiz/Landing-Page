@@ -1,7 +1,7 @@
-@keyframes fadeInMove{
+@keyframes fadeinmove{
     from{
         opacity:0;
-        transform:  translateY(20px)
+        transform:  translateY(-80px)
     }
     to{
         opacity:1;
@@ -9,6 +9,17 @@
     }
 }
 
+@keyframes fadeinmove2{
+    from{
+        opacity:0;
+        transform:  translateX(80px)
+    }
+    to{
+        opacity:1;
+        transform: translateX(0);
+    }
+
+}
 body{
     background-image: url(/pictures/wp7287123-4k-mountain-wallpapers.jpg);
     background-size: cover;
@@ -20,19 +31,26 @@ body{
     margin: 0;
 }
 
-a{
+.right-links a{
     text-decoration: none;
     color: white;
+    transition: all 0.1s ease-in-out ;
+    opacity: 50%;
+}
+
+.right-links a:hover{
+    opacity: 100%;
 }
 
 .picture img{
     width: 450px;
-    height: 250px;
+    height: 300px;
+    animation: fadeinmove2 1s ease-out;
 }
 
 .header{
     display: flex;
-    height: 50px;
+    height: 70px;
     justify-content: space-between;
     align-items: center;
     margin: 25px 50px;
@@ -50,11 +68,16 @@ a{
     padding-left: 50px;
 }
 
-span{
+.welcome-text{
+    font-size: 60px;
     color: white;
-    font-size: 50px;
-    font-family:serif;
     font-weight: 1000;
+}
+
+span img{
+    width: 65px;
+    height: auto;
+    padding-left: 50px;
 }
 
 p{
@@ -93,16 +116,16 @@ p{
     margin-top: 75px;
     justify-content: center;
     gap: 100px;
-    backdrop-filter:  blur(10px);
     padding: 50px;
-    animation: fadeInMove 1.5s ease-out;
 }
 
 .left-side{
+    box-sizing: border-box;
+    height: 300px;
+    padding: 32px;
     display: flex;
     flex-direction: column;
-}
-
-.picture{
-    display: flex;
+    animation: fadeinmove 1s ease-out;
+    box-shadow: 10px 10px 20px rgba(0,0,0,0.5);
+    backdrop-filter: blur(10px);
 }
