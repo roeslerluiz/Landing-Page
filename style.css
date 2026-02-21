@@ -1,3 +1,14 @@
+@keyframes fadeInMove{
+    from{
+        opacity:0;
+        transform:  translateY(20px)
+    }
+    to{
+        opacity:1;
+        transform: translateY(0);
+    }
+}
+
 body{
     background-image: url(/pictures/wp7287123-4k-mountain-wallpapers.jpg);
     background-size: cover;
@@ -84,6 +95,7 @@ p{
     gap: 100px;
     backdrop-filter:  blur(10px);
     padding: 50px;
+    animation: fadeInMove 1.5s ease-out;
 }
 
 .left-side{
